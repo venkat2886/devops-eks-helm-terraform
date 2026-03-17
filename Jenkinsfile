@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  triggers {
+    githubPush()
+  }
+
   environment {
     AWS_REGION   = "us-east-1"
     CLUSTER_NAME = "sandbox-devops-eks"
